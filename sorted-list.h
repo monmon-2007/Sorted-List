@@ -9,10 +9,31 @@
 /*
  * Sorted list type.  You need to fill in the type as part of your implementation.
  */
-struct SortedList
+ typedef int (*CompareFuncT)(void *, void *);
+ 
+ 
+typedef struct Node_
 {
+	void* dataPtr;
+	void* next;
+	int refCount;
+}Node;
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+struct SortedList 
+{
+	CompareFuncT cf;
+	int numItems;
+	Node* head;
 };
 typedef struct SortedList* SortedListPtr;
+
 
 
 /*
@@ -21,6 +42,7 @@ typedef struct SortedList* SortedListPtr;
  */
 struct SortedListIterator
 {
+       Node *ptr;
 };
 typedef struct SortedListIterator* SortedListIteratorPtr;
 
