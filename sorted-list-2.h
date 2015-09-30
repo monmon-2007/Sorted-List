@@ -5,12 +5,12 @@
 typedef int (*CompareFuncT)( void *, void * );
 typedef void (*DestructFuncT)( void * );
 
-typedef struct Node_
+/*typedef struct Node_
 {
 	void* dataPtr;
 	void* next;
 	int refCount;
-}Node;
+}Node;*/
 
 struct SortedList 
 {
@@ -22,7 +22,9 @@ typedef struct SortedList* SortedListPtr;
 
 struct SortedListIterator
 {
-       Node *ptr;
+       	void* dataPtr;
+	void* next;
+	int refCount;
 };
 typedef struct SortedListIterator* SortedListIteratorPtr;
 
