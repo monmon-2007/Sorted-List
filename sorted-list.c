@@ -20,7 +20,7 @@ SortedListPtr SLCreate(CompareFuncT cf, DestructFuncT df)
         
     sort->cfStruct = cf;
     sort->dfStruct = df;
-
+    sort->head = NULL;
     
     return sort;
 }
@@ -31,8 +31,12 @@ void SLDestroy(SortedListPtr list)
      
      free(list);
 }
-     
-     
-     
-     
-     
+
+int SLInsert(SortedListPtr list, void *newObj)
+{
+    list->head->dataPtr = newObj;
+    list->head->dataPtr++;
+    return 0;
+}
+    
+    
