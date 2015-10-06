@@ -1,0 +1,17 @@
+Systems programming
+PA2
+Testplan
+Roberto Merino  Mina Gadallah
+
+Testing with Characters
+We inserted the characters  z,a,a,b,x, into the list. We inserted ‘a’ twice, the list does not add this item twice iterating through the list outputs the list in descending order which is z,x,a,b,. We include Statements are printed out when we iterate through the list, iterator has been destroyed, printning values after deleting iterator.  We insert and remove items after the iterator has been destroyed. When the insert function has been called it always starts at the front of the list disregarding the current position of the iterator. 
+Testing with Integers
+we insert and array of integers into the list in descending order which are 2,3,10,8,4,11,21,8,1,7,16. We insert 8 twice to show that It does not duplicate it by saving it to another node. Once we iterate through the list it prints out the values from each node in descending order which is 21,16,11,10,8,7,4,3,2,1. We insert the number 100 into the list, which changes the list to 100,21,16,11,10,8,7,4,3,2,1 after the iterator has been used to traverse through the list. We delete the iterator and then print first two items in the list which are 100, followed by the second item which is 21. After we delete the item 100 the next items in the list are 21 followed by 16.the insert and remove functions ignore the iterator, when the program tries to insert and item it will always start at the front of the list. 
+Testing with Floats
+We insert an array of float numbers which are 2.2,3.6,10.9,8.3,4.7,11.3,21.7,8.1,1.8,7.2,16.5. AS we iterate through them they get printed in descending order based on the inset function which takes care of the sorting. We are able to delete the iterator without affect the list by printing our values from the list. We can inset or remove at any time disregarding the iterator.
+
+
+
+
+
+
